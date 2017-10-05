@@ -1,1 +1,1 @@
-# ENetMF
+This repository contains all the files necessary for replicating the results presented in the paper "An Elastic Net Regularized Matrix Factorization Technique for Recommender Systems", by Bianca Mitroi and Flavius Frasincar.
