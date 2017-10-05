@@ -1,0 +1,15 @@
+The full MovieLens 100K dataset contains 100,000 ratings (1-5) by 943 users on 1,682 items.
+The full MovieLens 100K dataset is a tab separated list of
+          user id | item id | rating | timestamp
+The time stamps are unix seconds since 1/1/1970 UTC.
+
+u1.base    -- The datasets u1.base and u1.test through u5.base and u5.test
+u1.test       are 80%/20% splits of the MovieLens 100K dataset into
+u2.base       training and test data. Each of u1, ..., u5 have disjoint test sets;
+u2.test       this if for 5-fold cross-validation (where you repeat your experiment
+u3.base       with each training and test set and average the results).
+u3.test
+u4.base
+u4.test
+u5.base
+u5.test
