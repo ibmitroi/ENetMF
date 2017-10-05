@@ -1,5 +1,5 @@
 <?php
-#----- FILES CLASS File -----#
+#----- FILES CLASS File  -----#
 # Description: Files Functions Class File
 # Author: Bianca Mitroi
 # Version: 1.0
