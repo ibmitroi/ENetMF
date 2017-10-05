@@ -48,9 +48,6 @@ foreach ($matrix_vars as $index=>$variables){
     list($alfa,$ro1,$ro2,$lambda1,$lambda2,$v1,$v2,$v3)=$variables;    
     $alfa=floatval($alfa); $ro1=floatval($ro1); $ro2=floatval($ro2); $lambda1=floatval($lambda1); $lambda2=floatval($lambda2); $v3=intval($v3);
     $MAE_FINAL=0; $N_FINAL=[0,0,0,0,0];
-    # set random P_int and Q_int
-    //$P_init=MATH::random_PQ_int($config_variables["P_init"][0],$config_variables["P_init"][1],$config_variables["P_init"][2]);
-    //$Q_init=MATH::random_PQ_int($config_variables["Q_init"][0],$config_variables["Q_init"][1],$config_variables["Q_init"][2]);
     for ($key=1; $key<=5; $key++){    
         # empty P and Q
         $matrix_P=[];
@@ -65,8 +62,6 @@ foreach ($matrix_vars as $index=>$variables){
                 $matrix_Q[$item][$factor]=MATH::set_Q($item,$factor);
             }
         }
-        //FILES::write_file_from_array(__DIR__."/results/matrix_P_".$key.".txt",$matrix_P);   // TEST
-        //FILES::write_file_from_array(__DIR__."/results/matrix_Q_".$key.".txt",$matrix_Q);   // TEST
         # calculate MAE($key), N($key,0), N($key,1), N($key,2), N($key,3), N($key,4)
         $MAE[$key]=0; $N[$key]=[0,0,0,0,0];
         foreach ($matrix_U["test"][$key] as $index2=>$row_data){
